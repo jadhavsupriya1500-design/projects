@@ -1,33 +1,44 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000;
 }
 
 .container {
-  display: flex;              /* makes left-right layout */
-  align-items: center;
+  display: flex;
   justify-content: space-between;
-  padding: 40px;
-  max-width: 1000px;
+  align-items: center;
+  max-width: 1100px;
   margin: auto;
+  padding: 60px 40px;
 }
 
-/* LEFT SIDE */
+/* LEFT TEXT */
 .text-section {
   width: 55%;
 }
 
 .text-section h1 {
-  font-size: 36px;
+  font-size: 56px;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 10px 0 30px;
 }
 
 .text-section p {
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.7;
+  margin-bottom: 15px;
 }
 
-/* RIGHT SIDE */
+/* RIGHT IMAGE */
 .image-section {
   width: 40%;
   text-align: right;
@@ -35,8 +46,31 @@ body {
 
 .image-section img {
   width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
+  max-width: 320px;
+  border-radius: 6px;
 }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-section,
+  .image-section {
+    width: 100%;
+  }
+
+  .image-section img {
+    margin-top: 30px;
+  }
+
+  .text-section h1 {
+    font-size: 42px;
+  }
+}
+
+
 
 
